@@ -1,0 +1,52 @@
+{
+  "name": "typescript-sample",
+  "version": "0.0.0",
+  "description": "Typescript Sample",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "scripts": {
+    "lint": "npx eslint ts/**/*.ts",
+    "lint:fix": "npx eslint ts/**/*.ts --fix",
+    "build": "npx tsc && npx rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx rollup -c --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.7",
+    "@types/xrm": "^9.0.39",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-deprecation": "^1.2.1",
+    "eslint-plugin-jsdoc": "^35.4.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2",
+    "rollup": "^1.32.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-terser": "^5.3.1",
+    "tslib": "^1.14.1",
+    "typescript": "^4.5.2"
+  },
+  "prettier": {
+    "printWidth": 150,
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "arrowParens": "always",
+    "endOfLine": "auto"
+  },
+  "-vs-binding": {
+    "BeforeBuild": [
+      "build"
+    ],
+    "ProjectOpened": [
+      "watch"
+    ]
+  }
+}
